@@ -1,0 +1,70 @@
+<?xml version="1.0"?>
+
+<!DOCTYPE struts-config PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+    "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+
+<struts-config>
+	<form-beans>
+		<form-bean name="bbsForm" type="bbs.BbsForm" />
+	</form-beans>
+
+
+	<action-mappings>
+
+		<action path="/BBS" type="bbs.BbsAction" name="bbsForm"
+			scope="request" validate="true">
+			<forward name="BBS" path="/view/BBS.jsp" />
+		</action>
+
+		<action path="/main" type="bbs.BbsMainAction" name="bbsForm"
+			scope="request" validate="true">
+			<forward name="main" path="/main.jsp" />
+		</action>
+
+		<action path="/write" type="bbs.BbsWriteAction" name="bbsForm"
+			scope="request" validate="true">
+			<forward name="write" path="/view/write.jsp" />
+		</action>
+
+		<action path="/write_ok" type="bbs.BbsWrite_ok_Action" name="bbsForm"
+			scope="request" validate="true">
+			<forward name="write_ok" path="/view/BBS.jsp" />
+		</action>
+
+		<action path="/update" type="bbs.BbsUpdateAction"
+			name="bbsForm" scope="request" validate="true">
+			<forward name="update" path="/view/update.jsp" />
+		</action>
+
+		<action path="/update_ok" type="bbs.BbsUpdate_ok_Action"
+			name="bbsForm" scope="request" validate="true">
+			<forward name="update_ok" path="/view/BBS.jsp" />
+		</action>
+
+		<action path="/view" type="bbs.BbsViewAction" name="bbsForm"
+			scope="request" validate="true">
+			<forward name="view" path="/view/view.jsp" />
+		</action>
+
+		<action path="/delete" type="bbs.BbsDeleteAction"
+			name="bbsForm" scope="request" validate="true">
+			<forward name="BBS" path="/view/BBS.jsp" />
+		</action>
+
+		<action path="/search" type="bbs.BbsSearchAction"
+			name="bbsForm" scope="request" validate="true">
+			<forward name="search" path="/view/BBSSearch.jsp" />
+		</action>
+
+		<action path="/search_ok" type="bbs.BbsSearch_ok_Action"
+			name="bbsForm" scope="request" validate="true">
+			<forward name="search_ok" path="/view/BBSSearch.jsp" />
+		</action>
+	</action-mappings>
+
+
+
+
+</struts-config>
